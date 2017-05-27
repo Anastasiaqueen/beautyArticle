@@ -1,31 +1,29 @@
-<view class="userview">
-  <view class="addbtn"></view>
-  <image class="userimage" src="{{userHeadImage}}"></image>
-  <text class="username">{{userName}}</text>
-  <view class="tabView">
-    <view class="tab">
-      <text>0</text>
-      <text class="tabtext">收藏</text>
-    </view>
-    <view class="line"></view>
-    <view class="tab">
-      <text>0</text>
-      <text class="tabtext">关注</text>
-    </view>
-    <view class="line"></view>
-    <view class="tab">
-      <text>0</text>
-      <text class="tabtext">粉丝</text>
+<view>
+  <view class="addbtn" bindtap="addimagecliock">添加</view>
+  <view class="userview">
+    <image class="userimage" src="{{userHeadImage}}"></image>
+    <text class="username">{{userName}}</text>
+    <view class="tabView">
+      <view class="tab">
+        <text>0</text>
+        <text class="tabtext">收藏</text>
+      </view>
+      <view class="line"></view>
+      <view class="tab">
+        <text>0</text>
+        <text class="tabtext">关注</text>
+      </view>
+      <view class="line"></view>
+      <view class="tab">
+        <text>0</text>
+        <text class="tabtext">粉丝</text>
+      </view>
     </view>
   </view>
-</view>
 
-<view class="projectview">
-  <block wx:for="{{projectArr}}" wx:for-index="index" wx:for-item="project">
-    <image class="addimage" bindtap="addimagecliock" src="/pages/image/plus.png"></image>
-  </block>
-
-  <view class="addview">
-    <image class="addimage" bindtap="addimagecliock" src="/pages/image/plus.png"></image>
+  <view class="projectview">
+    <block wx:for="{{projectArr}}" wx:for-index="index" wx:for-item="project">
+      <image class="addimage" bindtap="addimagecliock" src="/pages/image/plus.png"></image>
+    </block>
   </view>
 </view>

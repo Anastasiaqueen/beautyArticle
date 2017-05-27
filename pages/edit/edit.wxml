@@ -1,0 +1,6 @@
+<!--pages/edit/edit.wxml-->
+<view class="coverview">
+  <image class="covertopimage" src="{{coverimage}}"></image>
+  <text class="covertitle">{{coverTitle}}</text>
+  <!--<input type="text" class="covertitle"/>-->
+</view>

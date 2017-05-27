@@ -3,7 +3,7 @@ var util = require('../../utils/util.js')
 var app = getApp()
 Page({
   data: {
-    projectArr: [1,2,3,6,5,4,7,8],
+    projectArr: [],
     userHeadImage: null,
     userName: '',
     usersignature: '点击设置个性签名',
@@ -21,13 +21,15 @@ Page({
         userHeadImage: userInfo.avatarUrl,
         userName: userInfo.nickName,
       })
-      console.log(that.data.userInfo)
     })
   },
-  addimagecliock:function(){
+  addimagecliock: function () {
     wx.chooseImage({
-      success: function(res) {
-
+      success: function (res) {
+        console.log(res.tempFiles)
+        wx.navigateTo({
+          url: '/pages/edit/edit?imageURL=' + JSON.stringify(res.tempFiles),
+        })
       },
     })
   }
