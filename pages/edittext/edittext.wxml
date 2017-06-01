@@ -1,0 +1,5 @@
+<!--pages/edittext/edittext.wxml-->
+<view class="classname">
+  <textarea class="endinput" placeholder="不超过50字" maxlength='50' bindblur="complete"/>
+  <view class="endview" bindtap="endbtn">完成</view>
+</view>

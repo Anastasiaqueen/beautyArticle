@@ -1,32 +1,29 @@
-// pages/edit/edit.js
+// pages/edittext/edittext.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    coverimage: null,
-    coverTitle: '未命名标题'
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options.imageURL)
-    // 解析出来对象
-    var obj = JSON.parse(options.imageURL)
-    console.log(obj)
-    var that = this
-    that.setData({
-      coverimage: obj[0].path,
+
+  },
+  endbtn: function () {
+    wx.navigateBack({
+
     })
   },
-  edittext: function () {
-    wx.navigateTo({
-      url: '../edittext/edittext',
-    })
+  complete: function (e) {
+    console.log(e.detail.value)
+    wx.setStorageSync("titletext", e.detail.value)
   },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -38,15 +35,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    var that = this
-    if (wx.getStorageSync("titletext").length != 0){
-      that.setData({
-        coverTitle: wx.getStorageSync("titletext")
-      })
-      wx.removeStorageSync("titletext")
-    }else{
 
-    }
   },
 
   /**

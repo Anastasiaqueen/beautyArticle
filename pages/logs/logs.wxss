@@ -86,3 +86,9 @@
   height: 50px;
   background-color: rgba(100, 149, 237, 0.8);
 }
+.loginview{
+  position: absolute;
+  width: 100%;
+  height: 600px;
+  background-color: red;
+}

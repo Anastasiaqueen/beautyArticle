@@ -1,5 +1,7 @@
 <view>
-  <view class="addbtn" bindtap="addimagecliock">添加</view>
+<view class="loginview" wx:if="{{isshowlogin}}"></view>
+
+  <view class="addbtn" wx:if="{{!isshowlogin}}" bindtap="addimagecliock">添加</view>
   <view class="userview">
     <image class="userimage" src="{{userHeadImage}}"></image>
     <text class="username">{{userName}}</text>

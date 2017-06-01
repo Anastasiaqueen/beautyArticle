@@ -1,0 +1,21 @@
+/* pages/edittext/edittext.wxss */
+
+.endview {
+  top: 100%;
+  margin-top: -50px;
+  position: fixed;
+  background-color: blue;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  height: 50px;
+  width: 100%;
+  line-height: 50px;
+}
+
+.endinput {
+  /*background-color: chartreuse;*/
+  font-size: 17px;
+  width: 100%;
+  line-height: 20px;
+}

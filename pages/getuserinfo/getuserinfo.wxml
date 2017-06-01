@@ -1,0 +1,9 @@
+<!--pages/getuserinfo/getuserinfo.wxml-->
+<!--<text>pages/getuserinfo/getuserinfo.wxml</text>-->
+<view class="userinfoview" style="height:{{dHeigth}}px;">
+  <image class="userinfobg" src="/pages/image/4.jpg"></image>
+  <view class="userinfobtn" bindtap="weixinlogin">
+    <image class="wximage" src="/pages/image/wechatHL.png"></image>
+    <text class="logtext">微信登录</text>
+  </view>
+</view>
