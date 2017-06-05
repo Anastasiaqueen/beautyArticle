@@ -6,7 +6,8 @@ Page({
    */
   data: {
     coverimage: null,
-    coverTitle: '未命名标题'
+    coverTitle: '未命名标题',
+    isshowbtn: false,
   },
 
   /**
@@ -27,6 +28,17 @@ Page({
       url: '../edittext/edittext',
     })
   },
+  addimage: function () {
+    if (this.data.isshowbtn == true){
+      this.setData({
+        isshowbtn: false,
+      })
+    }else{
+      this.setData({
+        isshowbtn: true,
+      })
+    }
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -39,12 +51,12 @@ Page({
    */
   onShow: function () {
     var that = this
-    if (wx.getStorageSync("titletext").length != 0){
+    if (wx.getStorageSync("titletext").length != 0) {
       that.setData({
         coverTitle: wx.getStorageSync("titletext")
       })
       wx.removeStorageSync("titletext")
-    }else{
+    } else {
 
     }
   },

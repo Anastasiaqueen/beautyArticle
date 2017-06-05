@@ -3,3 +3,10 @@
   <image class="covertopimage" src="{{coverimage}}"></image>
   <text class="covertitle" bindtap="edittext">{{coverTitle}}</text>
 </view>
+<view class="addview">
+  <image class="addimage" bindtap="addimage" src="/pages/image/location.png"></image>
+  <view wx:if="{{isshowbtn}}" class="addimageortext">
+  <image class="image" src="/pages/image/icon_API_HL.png"></image>
+  <image class="image" src="/pages/image/icon_API_HL.png"></image>
+  </view>
+</view>

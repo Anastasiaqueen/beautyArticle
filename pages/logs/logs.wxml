@@ -1,5 +1,11 @@
 <view>
-<view class="loginview" wx:if="{{isshowlogin}}"></view>
+  <view class="loginview" wx:if="{{isshowlogin}}" style="height:{{dheigth}}px">
+    <image class="userinfobg" src="/pages/image/4.jpg"></image>
+    <view class="userinfobtn" bindtap="weixinlogin">
+      <image class="wximage" src="/pages/image/wechatHL.png"></image>
+      <text class="logtext">微信登录</text>
+    </view>
+  </view>
 
   <view class="addbtn" wx:if="{{!isshowlogin}}" bindtap="addimagecliock">添加</view>
   <view class="userview">

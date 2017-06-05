@@ -21,17 +21,6 @@ Page({
         })
       },
     })
-
-    //调用应用实例的方法获取全局数据
-    // app.getUserInfo(function (userInfo) {
-    //   //更新数据
-    //   console.log(userInfo)
-    // that.setData({
-    //   userInfo: userInfo,
-    //   userHeadImage: userInfo.avatarUrl,
-    //   userName: userInfo.nickName,
-    // })
-    // })
   },
   onShow: function () {
     var that = this
@@ -47,25 +36,30 @@ Page({
       that.setData({
         isshowlogin: true
       })
-      wx.login({
-        success: function (res) {
-          console.log(res)
-          wx.getUserInfo({
-            success: function (res) {
-              console.log(res.userInfo)
-              wx.setStorageSync('userinfo', res.userInfo)
-              that.setData({
-                isshowlogin: false,
-                userInfo: res.userInfo,
-                userHeadImage: res.userInfo.avatarUrl,
-                userName: res.userInfo.nickName,
-              })
-            }
-          })
-        }
-      })
     }
   },
+  //微信登录事件
+  weixinlogin: function () {
+    var that = this
+    wx.login({
+      success: function (res) {
+        console.log(res)
+        wx.getUserInfo({
+          success: function (res) {
+            console.log(res.userInfo)
+            wx.setStorageSync('userinfo', res.userInfo)
+            that.setData({
+              isshowlogin: false,
+              userInfo: res.userInfo,
+              userHeadImage: res.userInfo.avatarUrl,
+              userName: res.userInfo.nickName,
+            })
+          }
+        })
+      }
+    })
+  },
+  //添加图片
   addimagecliock: function () {
     wx.chooseImage({
       success: function (res) {
